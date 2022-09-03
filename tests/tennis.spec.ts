@@ -9,7 +9,7 @@ test('Tennis test', async ({page}) => {
     await page.waitForTimeout(5000);
     await page.screenshot({path});
     try {
-        await expect(page).toHaveScreenshot('tennis.png');
+        await expect(page).toHaveScreenshot('tennis2.png');
         console.log('Test passed');
     } catch (error) {
         sendEmail({attachments: [{filename: 'current-screenshot.png', path}]});
