@@ -3,10 +3,12 @@ import {sendEmail} from '../utils/email';
 import {constants} from '../constants';
 
 test('Tennis test', async ({page}) => {
+    sendEmail();
+
     await page.goto(constants.url);
 
     try {
-        await expect(page).toHaveScreenshot('tennis.png', {fullPage: true});
+        await expect(page).toHaveScreenshot('./tennis.png', {fullPage: true});
         console.log('Test passed');
     } catch (error) {
         const path = 'tennis123.png';
