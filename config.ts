@@ -3,8 +3,8 @@ import {constants} from './constants';
 export const config = {
     EMAIL_PASS: process.env.EMAIL_PASS,
     email: {
-        service: 'hotmail',
-        from: 'nitaiaharoni1@outlook.com',
+        service: 'Yahoo',
+        from: 'nitaiaharoni11@yahoo.com',
         to: [
             'nitaiaharoni1@gmail.com',
             // 'aharoni.amir@gmail.com',
