@@ -1,0 +1,21 @@
+{
+  "name": "portugal-register",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --headed",
+    "test:headless": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.25.1",
+    "mailosaur": "^8.4.0"
+  },
+  "dependencies": {
+    "@types/nodemailer": "^6.4.5",
+    "nodemailer": "^6.7.8"
+  }
+}
