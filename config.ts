@@ -7,8 +7,8 @@ export const config = {
         from: 'nitaiaharoni1@outlook.com',
         to: [
             'nitaiaharoni1@gmail.com',
-            // 'aharoni.amir@gmail.com',
-            // 'jen55sela@gmail.com',
+            'aharoni.amir@gmail.com',
+            'jen55sela@gmail.com',
             // 'irad.aharoni@gmail.com',
             // 'Ynon.aharoni@gmail.com',
             // 'yaelhalevi246@gmail.com'
