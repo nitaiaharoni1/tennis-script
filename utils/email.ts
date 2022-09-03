@@ -4,10 +4,15 @@ import * as Mail from 'nodemailer/lib/mailer';
 
 const transporter = createTransport({
     service: config.email.service,
+    host: 'smtp.mail.yahoo.com',
+    port: 465,
+    secure: false,
     auth: {
         user: config.email.from,
         pass: config.EMAIL_PASS,
     },
+    debug: false,
+    logger: true,
 });
 
 export const sendEmail = (options: Mail.Options = {}) => {
