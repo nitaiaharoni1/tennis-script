@@ -1,21 +1,25 @@
 import {expect, test} from '@playwright/test';
 import {constants} from '../constants';
-import {sendEmail} from '../utils/email';
+import * as fs from 'fs';
 
 const path = 'tennis123.png';
-
 
 test('Tennis test', async ({page}) => {
     await page.goto(constants.url);
     await page.waitForTimeout(5000);
+
     await page.screenshot({path});
     const compareScreenshotPath = 'tennis2.png';
+    const tennisTxtFileText = fs.readFileSync('tennis.txt', 'utf8');
+    const bodyText = await page.innerText('body');
+
     try {
-        console.log('Compare screenshot path', compareScreenshotPath);
-        await expect(page).toHaveScreenshot(compareScreenshotPath);
+        // await expect(page).toHaveScreenshot(compareScreenshotPath, {maxDiffPixels: 10});
+        await expect(bodyText).toBe(tennisTxtFileText);
         console.log('Test passed');
     } catch (error) {
-        sendEmail({attachments: [{filename: 'current-screenshot.png', path}]});
+        console.log('Found change');
+        // sendEmail({attachments: [{filename: 'current-screenshot.png', path}]});
     }
 
     await page.waitForTimeout(10000);
