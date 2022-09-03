@@ -5,7 +5,7 @@ export const config = {
     email: {
         service: 'hotmail',
         from: 'nitaiaharoni1@outlook.com',
-        to: 'nitaiaharoni1@gmail.com',
+        to: ['nitaiaharoni1@gmail.com', 'aharoni.amir@gmail.com', 'jen55sela@gmail.com', 'irad.aharoni@gmail.com', 'Ynon.aharoni@gmail.com'],
         subject: 'Tel Aviv Open Buy Tickets!',
         text: `Buy tickets at ${constants.url}`,
     },
