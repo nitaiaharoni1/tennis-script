@@ -19,6 +19,6 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
-        run: npm run test
+        run: npm run test:headless
         env:
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
