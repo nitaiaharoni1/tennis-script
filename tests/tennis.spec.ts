@@ -3,8 +3,6 @@ import {sendEmail} from '../utils/email';
 import {constants} from '../constants';
 
 test('Tennis test', async ({page}) => {
-    sendEmail();
-
     await page.goto(constants.url);
 
     try {
