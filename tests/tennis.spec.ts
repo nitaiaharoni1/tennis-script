@@ -6,10 +6,10 @@ const path = 'tennis123.png';
 
 test('Tennis test', async ({page}) => {
     await page.goto(constants.url);
-
-    await page.screenshot({path, fullPage: true});
+    await page.waitForTimeout(5000);
+    await page.screenshot({path});
     try {
-        await expect(page).toHaveScreenshot('tennis.png', {fullPage: true});
+        await expect(page).toHaveScreenshot('tennis.png');
         console.log('Test passed');
     } catch (error) {
         sendEmail({attachments: [{filename: 'current-screenshot.png', path}]});
