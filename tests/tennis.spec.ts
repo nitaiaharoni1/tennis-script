@@ -5,6 +5,7 @@ import {constants} from '../constants';
 test('Tennis test', async ({page}) => {
     await page.goto(constants.url);
 
+
     try {
         await expect(page).toHaveScreenshot('tennis.png', {fullPage: true});
         console.log('Test passed');
