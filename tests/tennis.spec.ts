@@ -4,6 +4,7 @@ import * as fs from 'fs';
 import {sendEmail} from '../utils/email';
 
 const path = 'tennis123.png';
+const forbidden = 'forbidden';
 
 test('Tennis test', async ({page}) => {
     await page.goto(constants.url);
@@ -16,6 +17,7 @@ test('Tennis test', async ({page}) => {
 
     try {
         // await expect(page).toHaveScreenshot(compareScreenshotPath, {maxDiffPixels: 0});
+        if (bodyText.toLowerCase().includes(forbidden)) return;
         await expect(bodyText).toBe(tennisTxtFileText);
         console.log('Test passed');
     } catch (error) {
